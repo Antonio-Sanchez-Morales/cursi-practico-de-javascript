@@ -46,6 +46,20 @@
       <input type="number" class="form-control" id="InputRadio" aria-describedby="emailHelp">
     <button type="button" class="btn btn-primary mt-3" onclick="calcularPerimetroCirculo()">Perimetro</button>
     <button type="button" class="btn btn-primary mt-3" onclick="calcularAreaCirculo()"> Area</button>
+
+    <h2 class="mt-3">Descubre si tu triangulo es isosceles</h2>
+    <div class="mb-3 mt-3">
+      <label for="Input1" class="form-label">Escribe cuanto mide el primer lado de tu triangulo: </label>
+      <input type="number" class="form-control" id="Input1" aria-describedby="emailHelp">
+      <div class="mb-3 mt-3">
+        <label for="Input2" class="form-label">Escribe cuanto mide el segundo lado de tu triangulo:</label>
+        <input type="number" class="form-control" id="Input2">
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="InputBaseIso" class="form-label">Escribe cuanto mide la base de tu triangulo:</label>
+        <input type="number" class="form-control" id="InputBaseIso">
+      </div>
+      <button type="button" class="btn btn-primary" onclick="descubrirSiEsIsosceles()">Descubrir si es isosceles</button>
   </form>
 
   <script src="./figuras.js"></script>

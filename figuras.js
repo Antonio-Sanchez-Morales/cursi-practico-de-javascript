@@ -53,6 +53,18 @@ function areaCirculo(radio) {
 
 console.groupEnd();
 
+//Triangulo Isosceles
+
+function trianguloIsosceles(lado1, lado2, base) {
+  if (lado1 === lado2 && lado1 != base) {
+    alert("Es un triangulo isosceles")
+    const altura = Math.sqrt(lado1 ** 2 - base ** 2 / 4)
+    console.log(altura)
+  } else {
+    alert("No es un triangulo isosceles")
+  }
+}
+
 // Aqui interactuamos con el HTML
 
 //Cuadrado
@@ -109,4 +121,17 @@ function calcularAreaCirculo() {
   const value = radio.value;
   const area = areaCirculo(value);
   alert(area);
+}
+
+//Triangulo Isosceles
+
+function descubrirSiEsIsosceles() {
+  const lado1 = document.getElementById("Input1");
+  const value1 = Number(lado1.value);
+  const lado2 = document.getElementById("Input2");
+  const value2 = Number(lado2.value);
+  const base = document.getElementById("InputBaseIso");
+  const value3 = Number(base.value);
+  const descubrir = trianguloIsosceles(value1,value2,value3)
+
 }
