@@ -37,8 +37,8 @@ function diametroCirculo(radio) {
 }
 
 //Pi
-// const PI = Math.PI;
-// console.log("PI es: " + PI)
+const PI = Math.PI;
+console.log("PI es: " + PI)
 //Circunferencia
 function perimetroCirculo(radio) {
   const diametro = diametroCirculo(radio);
@@ -94,7 +94,7 @@ function calcularPerimetroTriangulo() {
   const base = document.getElementById("InputBase");
   const value3 = Number(base.value);
 
-  const perimetro = perimetroTriangulo(value1,value2,value3);
+  const perimetro = perimetroTriangulo(value1, value2, value3);
   alert(perimetro);
 }
 
@@ -104,7 +104,7 @@ function calcularAreaTriangulo() {
   const base = document.getElementById("InputBase");
   const valueBase = Number(base.value);
 
-  const area = areaTriangulo(valueBase,valueAltura)
+  const area = areaTriangulo(valueBase, valueAltura)
   alert(area);
 }
 
@@ -132,6 +132,26 @@ function descubrirSiEsIsosceles() {
   const value2 = Number(lado2.value);
   const base = document.getElementById("InputBaseIso");
   const value3 = Number(base.value);
-  const descubrir = trianguloIsosceles(value1,value2,value3)
+  const descubrir = trianguloIsosceles(value1, value2, value3)
 
+}
+//Precios y Descuentos
+function calcularPrecioConDescuento(precio, descuento) {
+  const porcentajePrecioConDescuento = 100 - descuento;
+  const precioConDescuento = (precio * porcentajePrecioConDescuento) / 100;
+
+  return precioConDescuento
+}
+
+
+function onClickButtonPriceDiscount() {
+  const inputPrice = document.getElementById("InputPrice");
+  const priceVAlue = inputPrice.value;
+  const inputDiscount = document.getElementById("InputDiscount");
+  const discountValue = inputDiscount.value;
+
+  const precioConDescuento = calcularPrecioConDescuento(priceVAlue, discountValue);
+
+  const resultP = document.getElementById("ResultP");
+  resultP.innerText = "El precio con descuento son: $" + precioConDescuento;
 }

@@ -4,32 +4,36 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
   <title>Porcentajes y descuentos</title>
 </head>
 <body>
-  <header>
-    <h1>
+  <header class="container">
+    <h1 class="text-center">
       Porcentajes y descuentos
     </h1>
-    <p>Segundo taller</p>
+    <p class="text-center">Segundo taller</p>
   </header>
-  <section>
+  <section class="container col-6">
     <h2>Calcula el precio a pagar de tus productos con descuentos</h2>
     <form action="">
-      <label for="InputPrice">
+      <label for="InputPrice" class="form-label">
         Escribe el precio de tu producto
       </label>
-      <input type="number" id="InputPrice">
+      <input type="number" id="InputPrice" class="form-control">
 
       <label for="InputDiscount">
         Escribe el descuento de tu producto
       </label>
-      <input type="number" id="InputDiscount">
-      <button type="button" onclick="onClickButtonPriceDiscount()">
+      <input type="number" id="InputDiscount" class="form-control">
+      <button type="button" class="btn btn-primary mt-3" onclick="onClickButtonPriceDiscount()">
         Calcular el precio con descuento
       </button>
-
-      <p id="ResultP"></p>
+      <div class="card mt-3 col-8">
+        <p id="ResultP" class="mt-3 text-white bg-success text-center"></p>
+      </div>
     </form>
   </section>
   <script src="./descuentos.js"></script>

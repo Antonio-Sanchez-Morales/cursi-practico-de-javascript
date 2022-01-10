@@ -13,6 +13,7 @@
   <form class="container">
     <h1 class="text-center">Figuras Geometricas</h1>
     <p class="text-center h3 text-muted">Practica Platzi</p>
+    <!-- Cuadrado -->
     <h2 class="mt-3">Calcula el area y perimetro de un cuadrado</h2>
     <div class="mb-3 mt-3">
       <label for="InputCuadrado" class="form-label">Escribe cuanto mide cada lado de tu cuadrado:</label>
@@ -20,7 +21,7 @@
     </div>
     <button type="button" class="btn btn-primary" onclick="calcularPerimetroCuadrado()">Perimetro</button>
     <button type="button" class="btn btn-primary" onclick="calcularAreaCuadrado()">Area</button>
-
+    <!-- Triangulo -->
     <h2 class="mt-3">Calcula el area y perimetro de un triangulo</h2>
     <div class="mb-3 mt-3">
       <label for="InputLado1" class="form-label">Escribe cuanto mide el primer lado de tu triangulo: </label>
@@ -39,14 +40,14 @@
     </div>
     <button type="button" class="btn btn-primary" onclick="calcularPerimetroTriangulo()">Perimetro</button>
     <button type="button" class="btn btn-primary" onclick="calcularAreaTriangulo()">Area</button>
-
+    <!-- Circulo -->
     <h2 class="mt-3">Calcula el area y perimetro de un circulo</h2>
     <div class="mb-3 mt-3">
       <label for="InputRadio" class="form-label">Escribe cuanto mide el radio de tu circulo:</label>
       <input type="number" class="form-control" id="InputRadio" aria-describedby="emailHelp">
     <button type="button" class="btn btn-primary mt-3" onclick="calcularPerimetroCirculo()">Perimetro</button>
     <button type="button" class="btn btn-primary mt-3" onclick="calcularAreaCirculo()"> Area</button>
-
+      <!-- Triangulo isosceles -->
     <h2 class="mt-3">Descubre si tu triangulo es isosceles</h2>
     <div class="mb-3 mt-3">
       <label for="Input1" class="form-label">Escribe cuanto mide el primer lado de tu triangulo: </label>
@@ -60,9 +61,23 @@
         <input type="number" class="form-control" id="InputBaseIso">
       </div>
       <button type="button" class="btn btn-primary" onclick="descubrirSiEsIsosceles()">Descubrir si es isosceles</button>
+      <!-- Procentajes y Descuentos -->
+
+      <div class="row col-6">
+        <div class="col">
+          <h2 class="mt-3">Descubre cual es el precio con decuento</h2>
+          <div class="mb-3 mt-3">
+            <label for="InputPrice" class="form-label">Escribe el precio del producto: </label>
+            <input type="number" class="form-control" id="InputPrice" aria-describedby="emailHelp">
+            <div class="mb-3 mt-3">
+              <label for="InputDiscount" class="form-label">Escribe el descuento del producto:</label>
+              <input type="number" class="form-control" id="InputDiscount">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="onClickButtonPriceDiscount()">Descubrir precio con descuento</button>
+            <p id="ResultP"></p>
 
   </form>
 
-  <script src="./figuras.js"></script>
+  <script src="./talleres.js"></script>
 </body>
 </html>
