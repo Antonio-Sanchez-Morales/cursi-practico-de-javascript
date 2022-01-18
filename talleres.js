@@ -150,6 +150,7 @@ function onClickButtonPriceDiscount() {
   const inputDiscount = document.getElementById("InputDiscount");
   const discountValue = inputDiscount.value;
 
+
   const precioConDescuento = calcularPrecioConDescuento(priceVAlue, discountValue);
 
   const resultP = document.getElementById("ResultP");
